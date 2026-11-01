@@ -4,7 +4,7 @@
     "name": "Hatim"
   },
   "metadata": {
-    "description": "Hatim's Claude plugins and skills (content creation, Darija, dev).",
+    "description": "Hatim's plugins and skills for AI coding agents (content creation, Darija, dev).",
     "version": "0.1.0"
   },
   "plugins": [
@@ -12,7 +12,7 @@
       "name": "darija-shorts-script",
       "source": "./plugins/darija-shorts-script",
       "description": "Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description.",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }

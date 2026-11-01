@@ -37,7 +37,7 @@ Backticks, `**`, `>`, `-`, `#` and digits are neutral: they do not decide the di
 
 ## Do not guess: ask
 
-The user does not want predictions. When information is missing or a choice belongs to them, ask the question with concrete options: use the multiple-choice question tool (AskUserQuestion) if it is available, otherwise a numbered list. 2 to 4 options, your recommendation first, one sentence per option. Group all the questions of a given moment into a single message.
+The user does not want predictions. When information is missing or a choice belongs to them, ask the question with concrete options: use your multiple-choice question tool if you have one (AskUserQuestion in Claude Code), otherwise a numbered list. 2 to 4 options, your recommendation first, one sentence per option. Group all the questions of a given moment into a single message.
 
 Ask when:
 
@@ -58,7 +58,7 @@ Pick out the topic and, if given, the length from the message. Ask only the ques
 
 ### 2. Research
 
-Search the official documentation first, then recognized blogs and resources to fill in (concrete examples, common mistakes, context). Use WebSearch and WebFetch. If you have no web access, ask the user to provide the sources.
+Search the official documentation first, then recognized blogs and resources to fill in (concrete examples, common mistakes, context). Use your web search and page-fetching tools (WebSearch and WebFetch in Claude Code). If you have no web access, ask the user to provide the sources.
 
 Where to search depending on the topic:
 
