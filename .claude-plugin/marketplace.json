@@ -11,8 +11,7 @@
     {
       "name": "darija-shorts-script",
       "source": "./plugins/darija-shorts-script",
-      "description": "Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description.",
-      "version": "1.0.1"
+      "description": "Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description."
     }
   ]
 }

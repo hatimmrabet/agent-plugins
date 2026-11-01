@@ -38,24 +38,8 @@ Copy a skill folder (for example `plugins/darija-shorts-script/skills/darija-sho
 
 ## Plugins
 
-| Plugin | Description | Version |
-|--------|-------------|---------|
-| `darija-shorts-script` | Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description | 1.0.1 |
+| Plugin | Description |
+|--------|-------------|
+| `darija-shorts-script` | Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description |
 
-## Structure
-
-```
-agent-plugins/
-├── .claude-plugin/marketplace.json   # catalog
-└── plugins/
-    └── <plugin>/
-        ├── .claude-plugin/plugin.json  # manifest + version (semver)
-        ├── skills/<skill>/SKILL.md
-        └── CHANGELOG.md
-```
-
-## Publishing a new version
-
-1. Bump `version` in `plugins/<plugin>/.claude-plugin/plugin.json` and in `.claude-plugin/marketplace.json`
-2. Update the plugin's `CHANGELOG.md`
-3. `git commit -am "<plugin> vX.Y.Z" && git tag <plugin>-vX.Y.Z && git push --follow-tags`
+Release notes are in each plugin's `CHANGELOG.md`.
