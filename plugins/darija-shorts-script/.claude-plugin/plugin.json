@@ -3,7 +3,7 @@
   "description": "Prépare un script prêt à lire en darija marocaine pour un short vertical (YouTube Shorts, Reels, TikTok), avec titre, description et hashtags, après recherche et vérification des faits.",
   "version": "1.0.0",
   "author": { "name": "Hatim Mrabet", "url": "https://github.com/hatimmrabet" },
-  "repository": "https://github.com/hatimmrabet/hatimmrabet",
+  "repository": "https://github.com/hatimmrabet/agent-plugins",
   "license": "MIT",
   "keywords": ["darija", "maroc", "script", "shorts", "reels", "tiktok", "youtube"]
 }

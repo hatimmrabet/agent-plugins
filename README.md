@@ -5,7 +5,7 @@ Marketplace de plugins Claude Code de Hatim.
 ## Installation
 
 ```
-/plugin marketplace add hatimmrabet/hatimmrabet
+/plugin marketplace add hatimmrabet/agent-plugins
 /plugin install <nom-du-plugin>@hatimmrabet
 ```
 
