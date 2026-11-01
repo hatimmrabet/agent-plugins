@@ -1,230 +1,232 @@
 ---
 name: darija-shorts-script
-description: Prépare un script prêt à lire, en darija marocaine, pour une vidéo verticale courte (YouTube Shorts, Instagram Reels, Facebook Reels, TikTok), plus un titre et une description à copier-coller. Cherche les informations dans la documentation officielle et les blogs reconnus, choisit un hook adapté au sujet, écrit un script de 30 s à 2 min 30 et vérifie les faits. À utiliser dès que l'utilisateur dit « fais-moi un script pour [sujet] », « prépare un short / un reel / un TikTok sur... », « écris-moi un script en darija », « donne-moi un hook », « titre et description pour ma vidéo », ou qu'il donne un sujet (gaming, nouveau site web, commande en ligne de commande, cloud, concept tech) en demandant une vidéo courte, même sans prononcer le mot « skill ». Also use for "write me a script about X for a short/reel/TikTok".
+description: Prepares a ready-to-read script in Moroccan Darija for a short vertical video (YouTube Shorts, Instagram Reels, Facebook Reels, TikTok), plus a copy-paste title and description. Researches the topic in official documentation and recognized blogs, picks a hook suited to the subject, writes a 30 s to 2 min 30 script and fact-checks it. Use whenever the user says "write me a script about [topic]", "prepare a short / a reel / a TikTok about...", "write me a script in darija", "give me a hook", "title and description for my video", or gives a topic (gaming, new website, command-line command, cloud, tech concept) and asks for a short video, even without saying the word "skill". Also triggers on French requests such as « fais-moi un script pour [sujet] », « prépare un short / un reel / un TikTok sur... », « écris-moi un script en darija », « donne-moi un hook », « titre et description pour ma vidéo ».
 ---
 
-# Script de short en darija
+# Darija short script
 
-À partir d'un sujet, produit deux fichiers que l'utilisateur utilise tels quels :
+From a topic, produce two files the user uses as-is:
 
-- `<slug>-script.md` : le script à lire face caméra, avec les sources en bas.
-- `<slug>-description.md` : un titre et une description sans aucune mise en forme, à copier-coller sur les plateformes.
+- `<slug>-script.md`: the script to read to the camera, with the sources at the bottom.
+- `<slug>-description.md`: a title and a description with no formatting at all, to copy-paste onto the platforms.
 
-L'utilisateur enregistre en lisant le script. Tout ce dont il a besoin doit se trouver dans ces deux fichiers : il ne doit rien avoir à chercher ailleurs. Un script doit d'abord être facile à lire d'un coup d'œil, en filmant.
+The user records by reading the script. Everything they need must be in these two files: they should not have to look anything up elsewhere. A script must first of all be easy to read at a glance while filming.
 
-## Choix déjà faits (ne pas les redemander)
+## Decisions already made (do not ask again)
 
-- **Plateformes** : YouTube Shorts, Instagram Reels, Facebook Reels et TikTok. Une seule version, valable partout.
-- **Langue du script** : darija marocaine pure, écrite en alphabet arabe, à lire comme on parle. Les mots qui ne sont pas arabes (termes techniques, noms de produits, commandes) restent dans leur langue d'origine, anglais ou français, sans translittération. Détails dans `references/darija.md`.
-- **Titre et description** : darija + mots-clés d'origine, hashtags en lettres latines sauf le premier (voir la règle de direction).
-- **Adresse au spectateur** : singulier (كتعرف، شوف).
-- **Durée** : de 30 s à 2 min 30, jamais plus. Au-delà, c'est pénible à lire et à suivre.
-- **Sujets** : variés et changeants (gaming, nouveaux sites, commandes en ligne de commande, cloud, concepts tech). Ne rien supposer sur le sujet à partir de la vidéo précédente.
-- **Sources** : toutes en bas du script, hors de la zone de lecture, pour garder une trace. Elles restent dans leur langue d'origine, sans traduction.
-- **Titres du script** : en français ou en anglais, au choix, sans traduction en arabe.
+- **Platforms**: YouTube Shorts, Instagram Reels, Facebook Reels and TikTok. A single version, valid everywhere.
+- **Script language**: pure Moroccan Darija, written in Arabic script, to be read the way people speak. Words that are not Arabic (technical terms, product names, commands) stay in their original language, English or French, without transliteration. Details in `references/darija.md`.
+- **Title and description**: Darija + original-language keywords, hashtags in Latin letters except the first (see the direction rule).
+- **Addressing the viewer**: singular (كتعرف، شوف).
+- **Length**: from 30 s to 2 min 30, never more. Beyond that, it is tiresome to read and to follow.
+- **Topics**: varied and changing (gaming, new websites, command-line commands, cloud, tech concepts). Assume nothing about the topic from the previous video.
+- **Sources**: all at the bottom of the script, outside the reading area, to keep a record. They stay in their original language, untranslated.
+- **Script headings**: in French or English, either one, with no translation into Arabic.
 
-Si l'utilisateur demande autre chose pour une vidéo précise, sa demande du moment l'emporte.
+If the user asks for something else for a specific video, their request of the moment takes precedence.
 
-## Règle de direction : l'alignement de chaque ligne
+## Direction rule: the alignment of each line
 
-Un lecteur Markdown choisit le sens d'une ligne d'après son premier caractère « fort ». Une ligne qui commence par du français ou de l'anglais s'affiche de gauche à droite et mal alignée : l'utilisateur ne peut plus la lire en filmant.
+A Markdown reader picks the direction of a line from its first "strong" character. A line that starts with French or English is displayed left to right and badly aligned: the user can no longer read it while filming.
 
-- **Script** : écris naturellement, sans contorsion pour que chaque phrase commence par un mot arabe. Une fois le fichier écrit, lance `scripts/finalize.py` : il place le caractère invisible RLM (U+200F) au début de chaque ligne à lire, ce qui force l'affichage de droite à gauche. Si Python n'est pas disponible, insère ce caractère à la main devant chaque ligne à lire.
-- **Description** : c'est du texte copié-collé tel quel, donc aucun caractère invisible (il serait collé dans les légendes et pourrait empêcher une plateforme de reconnaître un hashtag). Le fichier est en `.md` : chaque ligne s'aligne d'après son premier caractère fort, donc commence chaque ligne par un mot arabe (réécris la phrase, ou mets devant un petit mot arabe : ال، و، ف، ل، هاد) et mets un hashtag arabe en premier (#تقنية، #معلوميات، #ألعاب).
-- **Titres, étiquettes et sources** : ils peuvent rester en français, en anglais ou dans la langue d'origine. Ce ne sont pas des lignes à lire.
+- **Script**: write naturally, without contortions to make every sentence start with an Arabic word. Once the file is written, run `scripts/finalize.py`: it places the invisible RLM character (U+200F) at the start of each line to be read, which forces right-to-left display. If Python is not available, insert that character by hand in front of each line to be read.
+- **Description**: this is copy-pasted text, so no invisible characters (they would be pasted into the captions and could stop a platform from recognizing a hashtag). The file is `.md`: each line aligns according to its first strong character, so start each line with an Arabic word (rewrite the sentence, or put a small Arabic word in front: ال، و، ف، ل، هاد) and put an Arabic hashtag first (#تقنية، #معلوميات، #ألعاب).
+- **Headings, labels and sources**: they may stay in French, English or their original language. They are not lines to be read.
 
-Les accents graves, `**`, `>`, `-`, `#` et les chiffres sont neutres : ils ne décident pas de la direction.
+Backticks, `**`, `>`, `-`, `#` and digits are neutral: they do not decide the direction.
 
-## Ne pas deviner : demander
+## Do not guess: ask
 
-L'utilisateur ne veut pas de prédictions. Quand il manque une information ou qu'un choix lui appartient, pose la question avec des options concrètes : utilise l'outil de questions à choix (AskUserQuestion) s'il est disponible, sinon une liste numérotée. 2 à 4 options, ta recommandation en premier, une phrase par option. Regroupe toutes les questions d'un même moment en un seul envoi.
+The user does not want predictions. When information is missing or a choice belongs to them, ask the question with concrete options: use the multiple-choice question tool (AskUserQuestion) if it is available, otherwise a numbered list. 2 to 4 options, your recommendation first, one sentence per option. Group all the questions of a given moment into a single message.
 
-Demande quand :
+Ask when:
 
-- le sujet est large : propose 2 à 4 angles possibles ;
-- la durée n'est pas donnée : propose des options dans la plage 30 s – 2 min 30, recommande celle qui correspond à la complexité du sujet ;
-- les sources sont introuvables, trop anciennes ou se contredisent : expose le désaccord et demande ce qu'il faut retenir ;
-- un mot ou une orthographe en darija est vraiment incertain.
+- the topic is broad: suggest 2 to 4 possible angles;
+- the length is not given: suggest options within the 30 s – 2 min 30 range, and recommend the one that fits the complexity of the topic;
+- the sources cannot be found, are too old or contradict each other: lay out the disagreement and ask what to keep;
+- a Darija word or spelling is truly uncertain.
 
-Ne demande pas ce que tu peux trancher toi-même : le hook, la structure, le ton, le titre. Choisis, et dis en une ligne pourquoi.
+Do not ask what you can decide yourself: the hook, the structure, the tone, the title. Choose, and say in one line why.
 
-Ne jamais inventer un fait technique (commande, option, prix, date, nom de fonctionnalité, version). Si les sources ne le confirment pas, ne l'écris pas dans le texte lu.
+Never invent a technical fact (command, option, price, date, feature name, version). If the sources do not confirm it, do not write it in the text that is read.
 
 ## Workflow
 
-### 1. Cadrage
+### 1. Scoping
 
-Relève dans le message le sujet et, s'il est donné, la durée. Pose uniquement les questions qui manquent (angle, durée), en un seul envoi. Si tout est clair, passe directement à la recherche.
+Pick out the topic and, if given, the length from the message. Ask only the questions that are missing (angle, length), in a single message. If everything is clear, go straight to research.
 
-### 2. Recherche
+### 2. Research
 
-Cherche d'abord dans la documentation officielle, puis dans les blogs et ressources reconnus pour compléter (exemples concrets, erreurs fréquentes, contexte). Utilise WebSearch et WebFetch. Si tu n'as pas d'accès web, demande à l'utilisateur de te fournir les sources.
+Search the official documentation first, then recognized blogs and resources to fill in (concrete examples, common mistakes, context). Use WebSearch and WebFetch. If you have no web access, ask the user to provide the sources.
 
-Où chercher selon le sujet :
+Where to search depending on the topic:
 
-| Type de sujet | Sources à privilégier |
+| Topic type | Sources to favor |
 |---|---|
-| Concept tech, cloud | Documentation du fournisseur (AWS, Google Cloud, Azure, Cloudflare...), MDN, RFC |
-| Commande en ligne de commande | Page man, `--help`, documentation officielle de l'outil, dépôt GitHub officiel |
-| Nouveau site ou outil | Site officiel, documentation, changelog, page de tarifs |
-| Gaming | Site de l'éditeur, notes de mise à jour, page Steam ou de la plateforme |
+| Tech concept, cloud | Provider documentation (AWS, Google Cloud, Azure, Cloudflare...), MDN, RFCs |
+| Command-line command | man page, `--help`, the tool's official documentation, official GitHub repository |
+| New website or tool | Official site, documentation, changelog, pricing page |
+| Gaming | Publisher's site, patch notes, Steam or platform page |
 
-Ce que tu dois en sortir : l'idée centrale en une phrase, les points essentiels (voir plus bas combien), un exemple concret ou une analogie, et le piège ou l'erreur fréquente si elle existe. Écarte le reste : la durée décide de ce qui reste.
+What you must come away with: the central idea in one sentence, the essential points (see below for how many), a concrete example or an analogy, and the pitfall or common mistake if there is one. Discard the rest: the length decides what stays.
 
-- Reformule toujours avec tes mots, ne recopie aucune phrase d'une source.
-- Vérifie la date et la version : une commande, un prix ou une fonctionnalité peut avoir changé.
-- Note le titre et l'URL de chaque source réellement consultée pour la fin du script.
+- Always rephrase in your own words, never copy a sentence from a source.
+- Check the date and the version: a command, a price or a feature may have changed.
+- Note the title and the URL of each source actually consulted, for the end of the script.
 
 ### 3. Hook
 
-Il y a toujours un hook. Lis `references/hooks.md`, choisis le type qui correspond au sujet et écris-le en darija. Prévois aussi 2 hooks alternatifs de types différents pour le bas du script.
+There is always a hook. Read `references/hooks.md`, choose the type that fits the topic and write it in Darija. Also prepare 2 alternative hooks of different types for the bottom of the script.
 
-### 4. Écriture
+### 4. Writing
 
-Budget de mots, à raison d'environ 130 mots par minute en comptant les pauses (estimation à ajuster, voir plus bas) :
+Word budget, at about 130 words per minute counting pauses (an estimate to adjust, see below):
 
-| Durée | Mots (environ) | Points à traiter |
+| Length | Words (approx.) | Points to cover |
 |---|---|---|
 | 30 s | 65 | 1 |
-| 45 s | 100 | 1 à 2 |
+| 45 s | 100 | 1 to 2 |
 | 1 min | 130 | 2 |
-| 1 min 30 | 195 | 2 à 3 |
-| 2 min | 260 | 3 à 4 |
-| 2 min 30 (maximum) | 325 | 3 à 5 |
+| 1 min 30 | 195 | 2 to 3 |
+| 2 min | 260 | 3 to 4 |
+| 2 min 30 (maximum) | 325 | 3 to 5 |
 
-Structure :
+Structure:
 
-1. **Hook** : première ligne de 10 mots maximum, aucune formule d'introduction avant.
-2. **Contexte** : pourquoi ça compte, en 1 à 2 phrases.
-3. **Idées** : une par point, chacune avec un titre court visible dans le script pour se repérer en filmant.
-4. **Clôture** : résume l'idée en une phrase, puis un seul appel à l'action simple (suivre, enregistrer, commenter). Si le hook était une question, la réponse est donnée ici, clairement.
+1. **Hook**: first line of 10 words maximum, no introductory phrase before it.
+2. **Context**: why it matters, in 1 to 2 sentences.
+3. **Ideas**: one per point, each with a short heading visible in the script to find your place while filming.
+4. **Closing**: sum up the idea in one sentence, then a single simple call to action (follow, save, comment). If the hook was a question, the answer is given here, clearly.
 
-Écris en suivant `references/darija.md`. Lis-le avant d'écrire : le script doit sonner comme quelqu'un qui parle, pas comme un texte.
+Write following `references/darija.md`. Read it before writing: the script must sound like someone talking, not like a text.
 
-Le débit de 130 mots par minute vient de sources anglophones. Si l'utilisateur donne son rythme réel (par exemple « 100 mots, c'est 48 s »), passe-le au script avec `--wpm` et signale-lui qu'il peut le garder comme référence.
+The rate of 130 words per minute comes from English-language sources. If the user gives their actual pace (for example "100 words is 48 s"), pass it to the script with `--wpm` and tell them they can keep it as a reference.
 
-### 5. Finalisation
+### 5. Finalization
 
-Écris les deux fichiers, puis lance le script fourni avec le skill. `scripts/` se trouve dans le dossier de ce skill (celui qui contient ce SKILL.md), pas dans le dossier de travail : utilise son chemin complet. Selon le système, la commande est `python` ou `python3`.
-
-```
-python <dossier du skill>/scripts/finalize.py <slug>-script.md <slug>-description.md
-```
-
-Il fait trois choses dans le script : ajouter les marques de direction, calculer les repères de temps de chaque titre et la ligne « Durée », compter les mots par section. Il contrôle aussi la description. Corrige tout ce qu'il signale (ATTENTION), puis relance-le jusqu'à ce qu'il n'y ait plus de problème.
-
-### 6. Vérification
-
-Relis le script avec cette liste avant de livrer :
-
-1. **Faits** : chaque affirmation technique vient d'une source consultée. Commandes, options, chiffres, dates et noms exacts. Ce que tu n'as pas pu confirmer va dans « À vérifier » en bas, jamais dans le texte lu. Pour une commande, distingue une option en ligne de commande (avec ses tirets exacts : `-x`, `--exclude`) d'une touche dans une interface (sans tiret : `d`, `q`) : vérifie dans la documentation laquelle c'est, et écris « ضغط على » devant une touche pour que ce soit clair à l'oral.
-2. **Durée** : entre 65 et 325 mots (le script de finalisation le contrôle).
-3. **Hook** : 10 mots maximum, on comprend de quoi parle la vidéo, et le contenu tient la promesse.
-4. **Darija** : aucune tournure d'arabe standard, ponctuation arabe, mots techniques dans leur langue d'origine, adresse au singulier.
-5. **Lisibilité** : une idée par ligne, une ligne vide entre deux lignes, titre principal et résumé des idées en haut, titres de section en H4.
-6. **Description** : les règles de la section suivante sont respectées.
-
-### 7. Titre et description
-
-Fichier `.md` pour que chaque ligne s'affiche de droite à gauche, mais **sans aucune mise en forme Markdown** (pas de `#` de titre, pas de `**`, pas de puces, pas d'étiquettes comme « Titre : »), parce que l'utilisateur copie et colle directement. Sépare chaque ligne de la suivante par une ligne vide : sans elle, Markdown les fusionne en un seul paragraphe et le copier-coller perd les retours à la ligne. Structure exacte :
+Write the two files, then run the script bundled with the skill. `scripts/` is in the folder of this skill (the one containing this SKILL.md), not in the working folder: use its full path. Depending on the system, the command is `python` or `python3`.
 
 ```
-<Titre>
-
-<Phrase d'accroche>
-
-<Une ou deux lignes de contexte, chacune séparée par une ligne vide>
-
-#<mot arabe> #<mot-clé> #<mot-clé>
+python <skill folder>/scripts/finalize.py <slug>-script.md <slug>-description.md
 ```
 
-Règles :
+It does three things in the script: add the direction marks, compute the time marks of each heading and the « Durée » line, count the words per section. It also checks the description. Fix everything it flags (WARNING), then run it again until there is no problem left.
 
-- **Titre** : 60 caractères maximum, commence par un mot arabe avec le mot-clé principal dans les premiers mots, fidèle au contenu, pas de MAJUSCULES intégrales, pas d'emoji. YouTube limite à 100 caractères, mais un titre court reste lisible sur mobile.
-- **Phrase d'accroche** : 125 caractères maximum. C'est ce qui reste visible avant « plus » sur plusieurs plateformes. Elle doit donner envie de regarder, pas répéter le titre.
-- **Contexte** : une ou deux lignes courtes. En tout, environ 300 caractères hors hashtags, ce qui passe sur les quatre plateformes.
-- **Hashtags** : 3 à 5, sans espace dans un hashtag, liés au sujet. Le premier est en arabe (règle de direction), les suivants en lettres latines. Pas de hashtag trompeur. Pas de `#Shorts` par défaut : YouTube classe en Short selon le format (vertical ou carré, 3 min maximum), pas selon un hashtag.
-- **Mots-clés** : 1 ou 2 mots-clés principaux présents dans le titre et dans la phrase d'accroche.
-- **Direction** : chaque ligne commence par un mot arabe, et aucun caractère invisible.
+### 6. Verification
 
-La première ligne sert de titre YouTube. Tout ce qui suit sert de description sur YouTube et de légende sur Instagram, Facebook et TikTok. Précise-le à l'utilisateur dans ta réponse.
+Reread the script with this list before delivering:
 
-Les limites et conseils des plateformes sont dans `references/plateformes.md`, avec leur niveau de fiabilité. Ne les cite pas comme des certitudes si elles sont marquées « Non confirmé ».
+1. **Facts**: every technical claim comes from a source you consulted. Exact commands, options, figures, dates and names. What you could not confirm goes under « À vérifier » at the bottom, never in the text that is read. For a command, tell apart a command-line option (with its exact dashes: `-x`, `--exclude`) from a key in an interface (no dash: `d`, `q`): check in the documentation which one it is, and write « ضغط على » in front of a key so that it is clear when spoken.
+2. **Length**: between 65 and 325 words (the finalization script checks it).
+3. **Hook**: 10 words maximum, you understand what the video is about, and the content keeps the promise.
+4. **Darija**: no Standard Arabic phrasing, Arabic punctuation, technical words in their original language, singular address.
+5. **Readability**: one idea per line, one blank line between two lines, main title and summary of the ideas at the top, section headings in H4.
+6. **Description**: the rules of the next section are followed.
 
-### 8. Livraison
+### 7. Title and description
 
-Les deux fichiers sont dans le dossier de travail courant, ou dans celui que l'utilisateur indique. Le slug est en minuscules latines, sans accent, avec des tirets.
+A `.md` file so that each line displays right to left, but **with no Markdown formatting at all** (no `#` headings, no `**`, no bullets, no labels like "Titre :"), because the user copies and pastes directly. Separate each line from the next with a blank line: without it, Markdown merges them into a single paragraph and the copy-paste loses the line breaks. Exact structure:
 
-Réponds ensuite en quelques lignes : durée estimée et nombre de mots, type de hook choisi et pourquoi, liens vers les deux fichiers, et ce qui reste à vérifier s'il y en a. Ne recopie pas le script dans la réponse : l'utilisateur le lit dans le fichier.
+```
+<Title>
 
-## Modèle du script
+<Teaser line>
 
-Respecte cette structure. Elle est faite pour être lue en filmant : un grand titre et un résumé pour survoler le script, puis des lignes courtes, une idée par ligne. Les mots entre chevrons sont à remplacer.
+<One or two lines of context, each separated by a blank line>
+
+#<Arabic word> #<keyword> #<keyword>
+```
+
+Rules:
+
+- **Title**: 60 characters maximum, starts with an Arabic word with the main keyword in the first few words, faithful to the content, no ALL CAPS, no emoji. YouTube allows 100 characters, but a short title stays readable on mobile.
+- **Teaser line**: 125 characters maximum. This is what stays visible before "more" on several platforms. It must make people want to watch, not repeat the title.
+- **Context**: one or two short lines. In total, about 300 characters excluding hashtags, which works on all four platforms.
+- **Hashtags**: 3 to 5, no space inside a hashtag, related to the topic. The first is in Arabic (direction rule), the following ones in Latin letters. No misleading hashtag. No `#Shorts` by default: YouTube classifies a video as a Short according to its format (vertical or square, 3 minutes maximum), not according to a hashtag.
+- **Keywords**: 1 or 2 main keywords present in both the title and the teaser line.
+- **Direction**: each line starts with an Arabic word, and no invisible character.
+
+The first line is used as the YouTube title. Everything that follows is used as the description on YouTube and as the caption on Instagram, Facebook and TikTok. Tell the user this in your reply.
+
+The platforms' limits and tips are in `references/plateformes.md`, with their reliability level. Do not quote them as certainties if they are marked "Unconfirmed".
+
+### 8. Delivery
+
+The two files are in the current working folder, or in the one the user indicates. The slug is in lowercase Latin letters, without accents, with hyphens.
+
+Then reply in a few lines: estimated length and word count, the type of hook chosen and why, links to the two files, and what is left to verify if anything. Do not copy the script into the reply: the user reads it in the file.
+
+## Script template
+
+Follow this structure. It is made to be read while filming: a big title and a summary to skim the script, then short lines, one idea per line. The words between angle brackets are to be replaced.
+
+The labels (`Durée`, `mots`, `Hook`, `Idées`, `Contexte`, `Idée`, `Clôture`, `Écran`, `À ne pas lire`, `Sources`, `Hooks alternatifs`, `À vérifier`) are written in French in the generated file, on purpose: `scripts/finalize.py` relies on `Durée` and `mots`, and the generated scripts keep the same look. Copy them exactly. In English: Durée = Duration, mots = words, Idées = Ideas, Contexte = Context, Clôture = Closing, Écran = Screen, À ne pas lire = Do not read, Hooks alternatifs = Alternative hooks, À vérifier = To verify.
 
 ```markdown
-# <Sujet en quelques mots>
+# <Topic in a few words>
 
 Durée : ~<n> s · <n> mots · Hook : <type>
 
-Idées : <idée 1> · <idée 2> · <idée 3>
+Idées : <idea 1> · <idea 2> · <idea 3>
 
 ---
 
 #### Hook · 0-6 s
 
-**<première ligne, 10 mots maximum>**
+**<first line, 10 words maximum>**
 
-<ligne>
+<line>
 
 #### Contexte · 6-16 s
 
-<ligne>
+<line>
 
-<ligne>
+<line>
 
-#### Idée 1 · <titre court> · 16-28 s
+#### Idée 1 · <short title> · 16-28 s
 
-<ligne>
+<line>
 
-<ligne>
+<line>
 
-> Écran : <ce qui s'affiche, par exemple la commande>
+> Écran : <what is displayed, for example the command>
 
-#### Idée 2 · <titre court> · 28-41 s
+#### Idée 2 · <short title> · 28-41 s
 
-<ligne>
+<line>
 
-<ligne>
+<line>
 
 #### Clôture · 41-46 s
 
-<ligne de résumé>
+<summary line>
 
-<appel à l'action>
+<call to action>
 
 ---
 
 #### À ne pas lire
 
 **Sources**
-- <titre de la page> : <URL>
+- <page title> : <URL>
 
 **Hooks alternatifs**
-- <type> : <ligne>
-- <type> : <ligne>
+- <type> : <line>
+- <type> : <line>
 
 **À vérifier**
-- <fait non confirmé, seulement s'il y en a>
+- <unconfirmed fact, only if there is one>
 ```
 
-Règles de mise en page :
+Layout rules:
 
-- **Haut du fichier** : un seul titre en H1 (le sujet), puis la durée et le type de hook, puis la ligne « Idées » qui résume le contenu en 3 à 5 repères de quelques mots chacun. Ça permet de survoler le script sans le lire en entier.
-- **Séparateur** : une ligne `---` entre ce résumé et le texte à lire, et une autre avant la partie « À ne pas lire ».
-- **Titres de section** : en H4 (`####`), jamais en H1, H2 ou H3 (sauf le titre du haut). Ce sont des repères discrets.
-- **Une idée = une ligne.** Une phrase par ligne, 6 à 12 mots, jamais de paragraphe. Mets une ligne vide entre deux lignes : sans elle, Markdown les fusionne en un seul bloc de texte chargé.
-- Mets en **gras** les 1 ou 2 mots à appuyer dans la ligne, pas plus.
-- Les repères de temps des titres et la ligne « Durée » sont recalculés par `scripts/finalize.py` : écris des valeurs approximatives, le script les corrige.
-- Les lignes `> Écran :` sont facultatives et ne sont pas lues. Mets-en seulement quand un visuel aide (une commande, un nom de menu), avec peu de texte : Instagram réduit la visibilité des vidéos surtout composées de texte.
-- Les commandes et le code vont entre accents graves.
-- Tout ce qui n'est pas à lire est sous « À ne pas lire » ou sur une ligne `>`.
+- **Top of the file**: a single H1 title (the topic), then the length and the hook type, then the « Idées » line that sums up the content in 3 to 5 cues of a few words each. This lets you skim the script without reading all of it.
+- **Separator**: a `---` line between this summary and the text to be read, and another before the « À ne pas lire » part.
+- **Section headings**: in H4 (`####`), never H1, H2 or H3 (except the title at the top). They are discreet landmarks.
+- **One idea = one line.** One sentence per line, 6 to 12 words, never a paragraph. Put a blank line between two lines: without it, Markdown merges them into a single dense block of text.
+- Put in **bold** the 1 or 2 words to stress in the line, no more.
+- The time marks of the headings and the « Durée » line are recomputed by `scripts/finalize.py`: write approximate values, the script corrects them.
+- The `> Écran :` lines are optional and are not read. Add them only when a visual helps (a command, a menu name), with little text: Instagram reduces the visibility of videos mostly made of text.
+- Commands and code go between backticks.
+- Everything that is not to be read is under « À ne pas lire » or on a `>` line.

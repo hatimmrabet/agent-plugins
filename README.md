@@ -1,36 +1,36 @@
-# hatimmrabet — plugins Claude
+# hatimmrabet — Claude plugins
 
-Marketplace de plugins Claude Code de Hatim.
+Hatim's Claude Code plugin marketplace.
 
 ## Installation
 
 ```
 /plugin marketplace add hatimmrabet/agent-plugins
-/plugin install <nom-du-plugin>@hatimmrabet
+/plugin install <plugin-name>@hatimmrabet
 ```
 
-Mise à jour : `/plugin marketplace update hatimmrabet`
+Update: `/plugin marketplace update hatimmrabet`
 
 ## Plugins
 
 | Plugin | Description | Version |
 |--------|-------------|---------|
-| `darija-shorts-script` | Script prêt à lire en darija pour Shorts / Reels / TikTok, avec titre et description | 1.0.0 |
+| `darija-shorts-script` | Ready-to-read Darija script for Shorts / Reels / TikTok, with title and description | 1.0.0 |
 
 ## Structure
 
 ```
-hatimmrabet/
-├── .claude-plugin/marketplace.json   # catalogue
+agent-plugins/
+├── .claude-plugin/marketplace.json   # catalog
 └── plugins/
     └── <plugin>/
-        ├── .claude-plugin/plugin.json  # manifeste + version (semver)
+        ├── .claude-plugin/plugin.json  # manifest + version (semver)
         ├── skills/<skill>/SKILL.md
         └── CHANGELOG.md
 ```
 
-## Publier une nouvelle version
+## Publishing a new version
 
-1. Bumper `version` dans `plugins/<plugin>/.claude-plugin/plugin.json`
-2. Mettre à jour le `CHANGELOG.md` du plugin
+1. Bump `version` in `plugins/<plugin>/.claude-plugin/plugin.json`
+2. Update the plugin's `CHANGELOG.md`
 3. `git commit -am "<plugin> vX.Y.Z" && git tag <plugin>-vX.Y.Z && git push --follow-tags`

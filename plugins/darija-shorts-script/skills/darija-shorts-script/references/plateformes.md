@@ -1,72 +1,72 @@
-# Règles et bonnes pratiques des plateformes
+# Platform rules and best practices
 
-Dernière vérification : 1er novembre 2026. Les plateformes changent souvent leurs règles. Si l'utilisateur demande de revérifier, ou si une règle ci-dessous conditionne ton travail et semble douteuse, refais une recherche rapide sur les pages officielles listées et mets ce fichier à jour.
+Last checked: November 1, 2026. Platforms change their rules often. If the user asks you to re-check, or if a rule below conditions your work and looks doubtful, run a quick search on the official pages listed and update this file.
 
-Niveaux de fiabilité : **Officiel** (page de la plateforme), **Indicatif** (blogs et guides de créateurs, sans source traçable), **Non confirmé** (sources contradictoires).
+Reliability levels: **Official** (platform page), **Indicative** (blogs and creator guides, no traceable source), **Unconfirmed** (contradictory sources).
 
-## Pourquoi la durée maximale est de 2 min 30
+## Why the maximum length is 2 min 30
 
-Les quatre plateformes acceptent une vidéo de moins de 3 minutes, et c'est le seuil au-delà duquel certaines ne recommandent plus la vidéo :
+All four platforms accept a video under 3 minutes, and that is the threshold beyond which some stop recommending the video:
 
-- YouTube Shorts : 3 min maximum, vertical ou carré. **Officiel.**
-- Instagram Reels : jusqu'à 3 min, et Instagram ne recommande pas aux nouveaux publics les vidéos de plus de 3 min. L'extension à 3 min a été annoncée le 21 janvier 2025 pour les États-Unis ; le déploiement dans les autres pays n'est pas confirmé. **Officiel.**
-- TikTok : tous les créateurs peuvent publier des vidéos de 3 min (certains 5 ou 10 min). **Officiel** (documentation développeurs).
-- Facebook Reels : Meta indique en juin 2025 que les Reels n'ont pas de limite de durée ni de format. Une ancienne page d'aide mentionne 60 s, elle est dépassée. **Officiel.**
+- YouTube Shorts: 3 min maximum, vertical or square. **Official.**
+- Instagram Reels: up to 3 min, and Instagram does not recommend videos longer than 3 min to new audiences. The extension to 3 min was announced on January 21, 2025 for the United States; the rollout in other countries is not confirmed. **Official.**
+- TikTok: all creators can post 3 min videos (some 5 or 10 min). **Official** (developer documentation).
+- Facebook Reels: Meta states in June 2025 that Reels have no length or format limit. An older help page mentions 60 s, which is out of date. **Official.**
 
 ## YouTube Shorts
 
-| Règle | Détail | Fiabilité |
+| Rule | Detail | Reliability |
 |---|---|---|
-| Format | Vertical ou carré, 3 min maximum, publié à partir du 15 octobre 2024 | Officiel |
-| Titre | 100 caractères maximum | Officiel |
-| Description | 5 000 caractères maximum | Officiel |
-| Hashtags | Jusqu'à 3 affichés au-dessus du titre, choisis parmi ceux de la description. Au-delà de 60 hashtags, YouTube les ignore tous. Pas d'espace dans un hashtag. Les hashtags trompeurs peuvent être retirés | Officiel |
-| Titre : conseils | Fidèle à la vidéo, mots-clés au début (le spectateur n'en voit parfois qu'une partie), MAJUSCULES et emojis avec parcimonie | Officiel |
-| Description : conseils | Décrire la vidéo dans les premières lignes, 1 à 2 mots-clés principaux présents dans le titre et la description, description unique par vidéo | Officiel |
-| Conseils créatifs | Accrocher dans les premières secondes, filmer en 9:16, texte à l'écran, message resserré, renvoyer vers une autre vidéo ou un autre Short | Officiel |
-| Musique | Les titres de la bibliothèque Shorts : jusqu'à 90 s sur un Short de 3 min, certains 60 ou 30 s | Officiel |
-| Droits d'auteur | Un Short de plus d'une minute avec une revendication de copyright est bloqué dans le monde entier | Officiel |
-| Classement | Les créateurs parlent de « viewed vs swiped away », sans formule publiée | Indicatif |
-| Longueur du titre | 40 à 60 caractères pour rester lisible sur mobile | Indicatif |
+| Format | Vertical or square, 3 min maximum, for videos published from October 15, 2024 | Official |
+| Title | 100 characters maximum | Official |
+| Description | 5,000 characters maximum | Official |
+| Hashtags | Up to 3 shown above the title, chosen from those in the description. Beyond 60 hashtags, YouTube ignores all of them. No space inside a hashtag. Misleading hashtags may be removed | Official |
+| Title: tips | Faithful to the video, keywords at the start (the viewer sometimes only sees part of it), CAPS and emojis used sparingly | Official |
+| Description: tips | Describe the video in the first lines, 1 to 2 main keywords present in both the title and the description, a unique description per video | Official |
+| Creative tips | Hook in the first seconds, film in 9:16, on-screen text, tight message, point to another video or another Short | Official |
+| Music | Tracks from the Shorts library: up to 90 s on a 3 min Short, some 60 or 30 s | Official |
+| Copyright | A Short longer than one minute with a copyright claim is blocked worldwide | Official |
+| Ranking | Creators talk about "viewed vs swiped away", with no published formula | Indicative |
+| Title length | 40 to 60 characters to stay readable on mobile | Indicative |
 
-Pages : [Shorts de trois minutes](https://support.google.com/youtube/answer/15424877), [hashtags](https://support.google.com/youtube/answer/6390658), [descriptions](https://support.google.com/youtube/answer/12948449), [titres](https://support.google.com/youtube/answer/12340300), [guide Shorts](https://blog.youtube/creator-and-artist-stories/your-guide-to-getting-started-with-youtube-shorts/).
+Pages: [Three-minute Shorts](https://support.google.com/youtube/answer/15424877), [hashtags](https://support.google.com/youtube/answer/6390658), [descriptions](https://support.google.com/youtube/answer/12948449), [titles](https://support.google.com/youtube/answer/12340300), [Shorts guide](https://blog.youtube/creator-and-artist-stories/your-guide-to-getting-started-with-youtube-shorts/).
 
 ## Instagram Reels
 
-| Règle | Détail | Fiabilité |
+| Rule | Detail | Reliability |
 |---|---|---|
-| Durée | Jusqu'à 3 min, recommandée aux non-abonnés si 3 min ou moins | Officiel |
-| Contenu original | Publier régulièrement du contenu original est un des leviers de croissance les plus efficaces | Officiel |
-| Moins visibles | Basse résolution, filigrane, vidéo muette ou avec bordures, vidéo surtout composée de texte, vidéo déjà publiée sur Instagram (Mosseri, mai 2023) | Officiel |
-| Signaux de classement | Probabilité de regarder jusqu'au bout, partager, aimer, visiter la page de l'audio | Officiel |
-| Hashtags | La page d'aide trouvée dit 30 maximum. Des sources secondaires disent 5 maximum pour un post ou un reel depuis décembre 2025 | Non confirmé |
-| Légende | 2 200 caractères maximum, hashtags compris | Non confirmé |
-| Début de légende | Seuls les 125 premiers caractères environ sont visibles avant « plus » | Indicatif |
-| Mots-clés | Dans la légende, ils aident plus la découverte que les hashtags | Indicatif |
+| Length | Up to 3 min, recommended to non-followers if 3 min or less | Official |
+| Original content | Regularly posting original content is one of the most effective growth levers | Official |
+| Less visible | Low resolution, watermark, muted video or video with borders, video mostly made of text, video already posted on Instagram (Mosseri, May 2023) | Official |
+| Ranking signals | Likelihood of watching to the end, sharing, liking, visiting the audio page | Official |
+| Hashtags | The help page found says 30 maximum. Secondary sources say 5 maximum for a post or a reel since December 2025 | Unconfirmed |
+| Caption | 2,200 characters maximum, hashtags included | Unconfirmed |
+| Start of caption | Only the first 125 characters or so are visible before "more" | Indicative |
+| Keywords | In the caption, they help discovery more than hashtags do | Indicative |
 
-Par prudence, le skill limite à 5 hashtags : ça passe quelle que soit la règle réelle.
+To be safe, the skill limits hashtags to 5: that passes whatever the real rule is.
 
-Pages : [Réussir avec les reels en 2025](https://creators.instagram.com/blog/the-latest-with-instagram), [Instagram Ranking Explained](https://about.instagram.com/blog/announcements/instagram-ranking-explained), [FAQ créateurs](https://creators.instagram.com/faq?locale=en_US).
+Pages: [Succeeding with Reels in 2025](https://creators.instagram.com/blog/the-latest-with-instagram), [Instagram Ranking Explained](https://about.instagram.com/blog/announcements/instagram-ranking-explained), [Creator FAQ](https://creators.instagram.com/faq?locale=en_US).
 
 ## Facebook Reels
 
-Aucune règle de format ou de durée particulière (voir plus haut). Pas de recherche détaillée sur la légende ou les hashtags : la description courte du skill est conçue pour passer partout. Pages : [Créer un reel](https://www.facebook.com/business/help/2683452421955589), [annonce Meta de juin 2025](https://about.fb.com/news/2025/06/making-it-easier-create-videos-facebook/).
+No particular format or length rule (see above). No detailed research on the caption or hashtags: the skill's short description is designed to work everywhere. Pages: [Create a reel](https://www.facebook.com/business/help/2683452421955589), [Meta announcement from June 2025](https://about.fb.com/news/2025/06/making-it-easier-create-videos-facebook/).
 
 ## TikTok
 
-| Règle | Détail | Fiabilité |
+| Rule | Detail | Reliability |
 |---|---|---|
-| Durée | 3 min pour tous les créateurs, certains 5 ou 10 min | Officiel |
-| Hook | Dans les 3 à 6 premières secondes (guide publicitaire de TikTok) | Officiel |
-| Légende | 2 200 ou 4 000 caractères selon les sources | Non confirmé |
-| Début de légende | Environ 80 à 100 caractères visibles avant « plus » | Indicatif |
-| Hashtags | 3 à 5 pertinents, les mots-clés comptent plus que le nombre | Indicatif |
+| Length | 3 min for all creators, some 5 or 10 min | Official |
+| Hook | Within the first 3 to 6 seconds (TikTok's advertising guide) | Official |
+| Caption | 2,200 or 4,000 characters depending on the sources | Unconfirmed |
+| Start of caption | About 80 to 100 characters visible before "more" | Indicative |
+| Hashtags | 3 to 5 relevant ones, keywords matter more than the number | Indicative |
 
-Pages : [documentation développeurs](https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide), [bonnes pratiques créatives](https://ads.tiktok.com/help/article/creative-best-practices).
+Pages: [developer documentation](https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide), [creative best practices](https://ads.tiktok.com/help/article/creative-best-practices).
 
-## Pratiques de la communauté (Indicatif, toutes plateformes)
+## Community practices (Indicative, all platforms)
 
-- Hook dans les 1 à 3 premières secondes. Structure courante : hook, tension ou contexte, contenu, boucle ou appel à l'action. Aucune étude solide ne la confirme.
-- Pas d'introduction ni de logo avant le hook.
-- Durée la plus citée : 15 à 35 s, et 30 à 60 s quand l'idée en a besoin. Aucune plateforme n'en recommande une.
-- Débit d'environ 130 à 150 mots par minute, calculé sur l'anglais. À recalibrer sur le rythme réel de l'utilisateur en darija.
+- Hook within the first 1 to 3 seconds. Common structure: hook, tension or context, content, loop or call to action. No solid study confirms it.
+- No introduction or logo before the hook.
+- Most cited length: 15 to 35 s, and 30 to 60 s when the idea needs it. No platform recommends one.
+- Speaking rate of about 130 to 150 words per minute, calculated on English. To be recalibrated on the user's actual pace in Darija.

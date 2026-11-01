@@ -1,30 +1,30 @@
-# Écrire en darija marocaine pour être lu à voix haute
+# Writing Moroccan Darija to be read aloud
 
-L'utilisateur lit le script tel quel, comme s'il parlait. Si une phrase sonne « livre » ou « journal télévisé », réécris-la comme on la dirait à un ami ou à un collègue.
+The user reads the script as-is, as if speaking. If a sentence sounds "bookish" or like the TV news, rewrite it the way you would say it to a friend or a colleague.
 
-## Principes
+## Principles
 
-- **Alphabet arabe**, sans voyelles (pas de tashkeel).
-- **Phrases courtes** : une idée par ligne, 6 à 10 mots, une respiration par ligne.
-- **Ordre des mots de l'oral**, sans incise longue ni subordonnée en cascade.
-- **Ponctuation arabe** : `،` et `؟`, et `...` pour une pause.
-- **Registre** : un collègue qui explique, énergique mais naturel. Pas de jargon inutile, pas d'insulte, un humour léger est bienvenu.
-- **Chiffres** en chiffres latins (30 ثانية, pas ثلاثون).
+- **Arabic script**, without vowels (no tashkeel).
+- **Short sentences**: one idea per line, 6 to 10 words, one breath per line.
+- **Spoken word order**, with no long asides or cascading subordinate clauses.
+- **Arabic punctuation**: `،` and `؟`, and `...` for a pause.
+- **Register**: a colleague explaining, energetic but natural. No needless jargon, no insults, light humor is welcome.
+- **Numbers** in Latin digits (30 ثانية, not ثلاثون).
 
-## Mots qui ne sont pas arabes
+## Words that are not Arabic
 
-- Termes techniques, noms de produits, commandes, sigles : **langue d'origine, lettres latines, jamais translittérés** (écrire `DNS`, pas دي إن إس).
-- Forme à utiliser : celle de la documentation officielle, le plus souvent l'anglais. Pour les mots courants du quotidien tech d'origine française (serveur, commande, entretien), les deux formes sont acceptables : reste cohérent dans tout le script. Préférence de l'utilisateur : écrire `entretien` en lettres latines, jamais `interview`.
-- **Préposition devant un mot latin** : sépare-la par une espace (`ف Git`, `ب Linux`, `ل AWS`).
-- **Début de ligne** : dans le script, écris naturellement, même si une ligne commence par un mot latin ou une commande. `scripts/finalize.py` place ensuite un caractère invisible au début de chaque ligne pour garder l'alignement de droite à gauche. Seule la description, copiée-collée telle quelle, doit commencer chaque ligne par un mot arabe. Détails dans la règle de direction de `SKILL.md`.
-- **Commandes et code** : entre accents graves (`ls -la`), pour qu'ils se distinguent à la lecture.
-- **Prononciation** : si un sigle peut se lire de deux façons, ajoute une courte indication dans « À ne pas lire », pas dans le texte lu.
+- Technical terms, product names, commands, acronyms: **original language, Latin letters, never transliterated** (write `DNS`, not دي إن إس).
+- Form to use: the one in the official documentation, most often English. For everyday tech words of French origin (serveur, commande, entretien), both forms are acceptable: stay consistent throughout the script. User preference: write `entretien` in Latin letters, never `interview`.
+- **Preposition in front of a Latin word**: separate it with a space (`ف Git`, `ب Linux`, `ل AWS`).
+- **Start of line**: in the script, write naturally, even if a line starts with a Latin word or a command. `scripts/finalize.py` then places an invisible character at the start of each line to keep the right-to-left alignment. Only the description, copy-pasted as-is, must start each line with an Arabic word. Details in the direction rule of `SKILL.md`.
+- **Commands and code**: in backticks (`ls -la`), so they stand out when reading.
+- **Pronunciation**: if an acronym can be read in two ways, add a short note under "À ne pas lire" (the "Do not read" section of the script), not in the text that is read.
 
-## Éviter l'arabe standard
+## Avoiding Standard Arabic
 
-La darija varie selon les régions et cette liste n'est ni exhaustive ni normative. Elle donne les réflexes les plus utiles.
+Darija varies from region to region, and this list is neither exhaustive nor normative. It gives the most useful reflexes.
 
-| Arabe standard (à éviter) | Darija (à écrire) |
+| Standard Arabic (avoid) | Darija (write) |
 |---|---|
 | ماذا | شنو |
 | لماذا | علاش |
@@ -54,13 +54,13 @@ La darija varie selon les régions et cette liste n'est ni exhaustive ni normati
 | سهل / صعب | ساهل / صعيب |
 | ملك / خاص بـ | ديال (الموقع ديالك) |
 
-Rappels de grammaire orale :
+Spoken grammar reminders:
 
-- Présent avec préfixe : كيدير، كتكتب، كنشوف، كيخدم.
-- Futur : غادي + verbe (غادي تفهم).
-- Négation : ما ... ش (ما كيخدمش).
-- Mots de liaison : ملي (quand), إلا (si), باش (pour), حيت (parce que), ولا (ou), ماشي (n'est pas).
+- Present tense with prefix: كيدير، كتكتب، كنشوف، كيخدم.
+- Future: غادي + verb (غادي تفهم).
+- Negation: ما ... ش (ما كيخدمش).
+- Linking words: ملي (when), إلا (if), باش (in order to), حيت (because), ولا (or), ماشي (is not).
 
-## Corrections de l'utilisateur
+## User corrections
 
-Quand l'utilisateur corrige un mot ou une orthographe, applique-le pour tout le reste de la conversation et propose d'ajouter cette préférence ici. En cas de vrai doute sur un mot, choisis la forme la plus répandue au Maroc, ou demande à l'utilisateur plutôt que de trancher au hasard.
+When the user corrects a word or a spelling, apply it for the rest of the conversation and offer to add that preference here. If you are truly unsure about a word, choose the form most common in Morocco, or ask the user rather than deciding at random.
